@@ -1,9 +1,10 @@
 import React, { useState, useRef } from 'react';
 import Header from './components/Header.jsx';
 import Menu from './components/Menu.jsx';
-import Cart from './components/Cart.jsx';
 import Hero from './components/Hero.jsx';
+import Cart from './components/Cart.jsx';
 import FloatingCartButton from './components/FloatingCartButton.jsx';
+import Navbar from './components/Navbar.jsx';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -31,7 +32,9 @@ function App() {
 
   return (
     <div className="bg-gradient-to-br from-[#fff8f0] to-[#f0f0ff] min-h-screen text-gray-800 font-sans">
+      <Navbar />
       <Header />
+
       <Hero />
       <Menu addToCart={addToCart} />
       <div ref={cartRef}>
